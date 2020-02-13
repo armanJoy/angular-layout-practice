@@ -1,38 +1,120 @@
 <html>
   <head>
+
+    <title>Home</title>
+
+    <!-- Angular Material Script & CSS -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
 
+    <!-- My Script & CSS -->
+    <link rel="stylesheet" href="main.css">
     <script src="ng.js"></script>
-    <title>Home</title>
-  </head>
-  <body>
-    <div ng-app="myApp" ng-controller="myCtrl" >
 
-      <div layout="collum">
+  </head>
+
+  <body>
+
+     <!-- Main Caontainer -->
+     <div ng-app="myApp" ng-controller="myCtrl" >
+
+      <!-- inputForm End -->
+      <div layout="collum" style="padding:20px;">
+
+
+         <div flex=50 id="inputForm">
+
+            <div id="inputName">
+
+               <h3>Basic Information</h3>
+               <span>Name: </span>
+               <textarea name="name" rows="1" cols="80" ng-model="info.name"></textarea>
+
+            </div>
+
+            <div id="inputPhone">
+
+               <span>Phone: </span>
+               <textarea name="name" rows="1" cols="80" ng-model="info.contact.phone"></textarea>
+
+            </div>
+
+            <div id="inputEmail">
+
+               <span>Email: </span>
+               <textarea name="name" rows="1" cols="80" ng-model="info.contact.email"></textarea>
+
+            </div>
+
+            <div id="inputHouse">
+
+               <h3>Parmanent Address</h3>
+               <p>House No: <textarea name="name" rows="1" cols="80" ng-model="info.address.parmanent.house"></textarea></p>
+
+            </div>
+
+            <div id="inputRoad">
+
+               <span>Road No: </span>
+               <textarea name="name" rows="1" cols="80" ng-model="info.address.parmanent.road"></textarea>
+
+            </div>
+
+            <div id="inputDistrict">
+
+               <span>District: </span>
+               <textarea name="name" rows="1" cols="80" ng-model="info.address.parmanent.district"></textarea>
+
+            </div>
+
+            <div id="inputBlock">
+
+               <h3>Parmanent Address</h3>
+               <span>Block No: </span>
+               <textarea name="name" rows="1" cols="80" ng-model="info.address.present.block"></textarea>
+
+            </div>
+
+            <div id="inputAvenue">
+
+               <span>Avenue No: </span>
+               <textarea name="name" rows="1" cols="80" ng-model="info.address.present.avenue"></textarea>
+            </div>
+            <div id="inputSubmit">
+               <br>
+               <button type="button" name="button" ng-click="submit()">Submit</button>
+            </div>
+         </div>
+
+      </div>
+      <!-- inputForm End -->
+
+      <br><br><br>
+
+      <!-- profileTable Start -->
+      <div layout="collum" id="profileTable" style="margin-left:20px; margin-right:20px">
 
          <div flex=100 class="row1">
 
             <div layout="row" style="border: 1px solid black; text-align: center">
 
-               <div flex=15 class="name" style="border: 1px solid blue">
+               <div flex=15 class="name" style="border: 1px solid black;">
                   <p>Name</p>
                </div>
 
-               <div flex=25 class="contact" style="border: 1px solid blue">
+               <div flex=25 class="contact" style="border: 1px solid black;">
 
                   <p>Contact</p>
 
                   <div layout="row" style="height:67%">
-                     <div flex=50 class="phone" style="border: 1px solid red">
+                     <div flex=50 class="phone" style="border: 1px solid black;">
                         <p>Phone</p>
                      </div>
-                     <div flex=50 class="email" style="border: 1px solid red">
+                     <div flex=50 class="email" style="border: 1px solid black;">
                         <p>Email</p>
                      </div>
 
@@ -40,30 +122,30 @@
 
                </div>
 
-               <div flex=60 class="address"  style="border: 1px solid blue">
+               <div flex=60 class="address" style="border: 1px solid black;">
 
                   <p>Address</p>
 
                   <div layout="row">
-                     <div flex=65 class="parmanent" style="border: 1px solid red">
+                     <div flex=65 class="parmanent" style="border: 1px solid black;">
 
                         <p>parmanent</p>
 
                         <div layout="row">
 
-                           <div flex=33 class="house" style="border: 1px solid green">
+                           <div flex=33 class="house" style="border: 1px solid black;">
 
                               <p>House No.</p>
 
                            </div>
 
-                           <div flex=33 class="road" style="border: 1px solid green">
+                           <div flex=33 class="road" style="border: 1px solid black;">
 
                               <p>Road No.</p>
 
                            </div>
 
-                           <div flex=33 class="district" style="border: 1px solid green">
+                           <div flex=33 class="district" style="border: 1px solid black;">
 
                               <p>District</p>
 
@@ -73,19 +155,19 @@
 
                      </div>
 
-                     <div flex=35 class="present" style="border: 1px solid red">
+                     <div flex=35 class="present" style="border: 1px solid black;">
 
                         <p>Present</p>
 
                         <div layout="row">
 
-                           <div flex=50 class="block" style="border: 1px solid green">
+                           <div flex=50 class="block" style="border: 1px solid black;">
 
                               <p>Block No.</p>
 
                            </div>
 
-                           <div flex=50 class="avenue" style="border: 1px solid green">
+                           <div flex=50 class="avenue" style="border: 1px solid black;">
 
                               <p>Avenue</p>
 
@@ -103,27 +185,27 @@
 
             <div flex=100 class="row2">
 
-               <div layout="row" style="border: 1px solid black; text-align: center">
+               <div layout="row" ng-repeat="item in profileData" style="border: 1px solid black; text-align: center">
 
-                  <div flex=15 class="name" style="border: 1px solid blue">
+                  <div flex=15 class="name">
 
-                     <textarea name="name" rows="2" cols="20"></textarea>
+                     <textarea name="name" rows="2" cols="20">{{item.name}}</textarea>
 
                   </div>
 
-                  <div flex=25 class="contact" style="border: 1px solid blue">
+                  <div flex=25 class="contact">
 
                      <div layout="row">
 
-                        <div flex=50 class="phone" style="border: 1px solid red">
+                        <div flex=50 class="phone">
 
-                           <textarea name="name" rows="2" cols="17"></textarea>
+                           <textarea name="name" rows="2" cols="17">{{item.contact.phone}}</textarea>
 
                         </div>
 
-                        <div flex=50 class="email" style="border: 1px solid red">
+                        <div flex=50 class="email">
 
-                           <textarea name="name" rows="2" cols="17"></textarea>
+                           <textarea name="name" rows="2" cols="17">{{item.contact.email}}</textarea>
 
                         </div>
 
@@ -131,30 +213,30 @@
 
                   </div>
 
-                  <div flex=60 class="address"  style="border: 1px solid blue">
+                  <div flex=60 class="address">
 
 
                      <div layout="row">
 
-                        <div flex=65 class="parmanent" style="border: 1px solid red">
+                        <div flex=65 class="parmanent">
 
                            <div layout="row">
 
-                              <div flex=33 class="house" style="border: 1px solid green">
+                              <div flex=33 class="house">
 
-                                 <textarea name="name" rows="2" cols="17"></textarea>
-
-                              </div>
-
-                              <div flex=33 class="road" style="border: 1px solid green">
-
-                                 <textarea name="name" rows="2" cols="17"></textarea>
+                                 <textarea name="name" rows="2" cols="17">{{item.address.parmanent.house}}</textarea>
 
                               </div>
 
-                              <div flex=33 class="district" style="border: 1px solid green">
+                              <div flex=33 class="road">
 
-                                 <textarea name="name" rows="2" cols="17"></textarea>
+                                 <textarea name="name" rows="2" cols="17">{{item.address.parmanent.road}}</textarea>
+
+                              </div>
+
+                              <div flex=33 class="district">
+
+                                 <textarea name="name" rows="2" cols="17">{{item.address.parmanent.district}}</textarea>
 
                               </div>
 
@@ -162,19 +244,19 @@
 
                         </div>
 
-                        <div flex=35 class="present" style="border: 1px solid red">
+                        <div flex=35 class="present">
 
                            <div layout="row">
 
-                              <div flex=50 class="block" style="border: 1px solid green">
+                              <div flex=50 class="block">
 
-                                 <textarea name="name" rows="2" cols="13"></textarea>
+                                 <textarea name="name" rows="2" cols="13">{{item.address.present.block}}</textarea>
 
                               </div>
 
-                              <div flex=50 class="avenue" style="border: 1px solid green">
+                              <div flex=50 class="avenue">
 
-                                 <textarea name="name" rows="2" cols="13"></textarea>
+                                 <textarea name="name" rows="2" cols="13">{{item.address.present.avenue}}</textarea>
 
                               </div>
 
@@ -187,12 +269,13 @@
                   </div>
 
                </div>
+
             </div>
+
          </div>
 
       </div>
-
-
+      <!-- profileTable End -->
 
     </div>
 
